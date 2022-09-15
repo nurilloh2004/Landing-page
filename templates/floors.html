@@ -1,0 +1,5 @@
+<select class="flat-select" name="entrences" id="flats1" hx-get = "/entrences/" hx-trigger = "change" hx-target = "#entrences">
+    {% for floor in floors %}
+    <option class="flat-option" value="{{floor.pk}}">{{floor.name}}</option>
+    {% endfor %}
+</select>

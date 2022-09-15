@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Горное Солнце</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link href="{% static 'https://unpkg.com/aos@2.3.1/dist/aos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+
+</head>
+<body>
+     <header>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="header-main">
+                <div class="header-theme">
+                    <a class="header-logo" href="#"><h1>Горное Солнце</h1></a>
+                </div>
+                <div class="navbar-btns burger-nav">
+                    <div class="help-burger">
+                        <a href="#complex">О комплексе</a>
+                        <a href="#main">Особености </a>
+                        <a href="#layouts-scn">Планировка</a>
+                        <a href="#location">Месторасположение</a>
+                    </div>
+                </div>
+                <div class="header-right-content burger-nav-call-btn">
+                    <div>
+                        <a href="#"><img src="{% static './imgs/telephone-icon.svg'%}" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="{% static './imgs/instagram-icon.svg'%}" alt=""></a>
+                    </div>
+                    <div>
+                        <a class="header-btn Click-here" >Позвонить</a>
+                    </div>
+                </div>
+                <div class="custom-model-main">
+                    <div class="custom-model-inner">        
+                    <div class="close-btn"></div>
+                        <div class="custom-model-wrap">
+                            <div class="pop-up-content-wrap">
+                             <a class="pop-up-call-btn" href="">+7-778-003-03-69</a>
+                            </div>
+                        </div>  
+                    </div>  
+                    <div class="bg-overlay"></div>
+                </div> 
+            </div>
+        </div>
+        <div class="video-content-img">
+            <img src="{% static './imgs/video-img.png'%}" alt="">
+        </div>
+        <div class="header-banner-content">
+            <img src="{% static './imgs/header-banner.png'%}" alt="">
+        </div>
+    </header>
+    <section class="big-section-content">
+        <div class="section-start-img">
+            <img class="after-img" src="{% static './imgs/start-section-bg-img.png'%}" alt="">
+        </div>
+        <div class="scroll-down-content">
+            <a class="scroll-down-button" href="#complex"><img src="{% static './imgs/scroll-down.png'%}" alt=""></a>
+        </div>
+        <div class="container">
+            <div class="complex-main" id="complex">
+                <div class="complex-content">
+                    <div class="complex-content-inside">
+                        <p class="complex-name">О комплексе</p>
+                        <span class="complex-theme">Создавая ваше настроение</span>
+                        <div class="complex-active">
+                            <p class="complex-txt complex-txt-1">Жилой комплекс «Горное Солнце» – дом, где все сделано с умом.</p>
+                        </div>
+                        <div class="complex-active-1">
+                            <p class="complex-txt complex-txt-2" id="complex-text-add">Обратите внимание, «Горное Солнце» - это уникальное здание, построенное с применением современных материалов и технологий в соответствии с мировыми стандартами строительства, экологической безопасности и энергоэффективности.
+
+                                Жилой комплекс находится в одном из лучших и экологически чистых районов Алматы, состоит из 139 квартир и занимает общую площадь в 27 859 м2. Дом уже сдан в эксплуатацию.
+                                
+                                В «Горном Солнце» всего четыре этажа, а это значит, что здесь вас и ваших близких ждет минимум соседей, уединение, уют и всегда хорошее настроение!
+                                
+                                Акт приемки объекта в эксплуатацию №1537 от 21.12.17</p>
+                        </div>
+                        <div class="complex-small-contents" id="first-small">
+                            <div class="complex-small-content complex-1">
+                                <img src="{% static './imgs/complex-control.png'%}" alt="">
+                                <p>Контроль</p>
+                            </div>
+                            <div class="complex-small-content complex-2">
+                                <img src="{% static './imgs/complex-wall.png'%}" alt="">
+                                <p>Сейсмостойкость</p>
+                            </div>
+                            <div class="complex-small-content complex-3">
+                                <img src="{% static './imgs/ecotech.png'%}" alt="">
+                                <p>Экотехнологии</p>
+                            </div>
+                            <div class="complex-small-content complex-4">
+                                <img src="{% static './imgs/Reliability.png'%}" alt="">
+                                <p>Надежность</p>
+                            </div>
+                        </div>
+                        <div class="complex-btn-content">
+                            <a href="#complex-text-add" class="complex-btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="strange-img-content">
+                    <div class="strange-main-image">
+                        <img src="{% static './imgs/complex-img.png'%}" alt="">
+                    </div>
+                    <div class="background-border">
+                    </div>
+                </div>
+            </div>
+            <div class="last-slider-section">
+                <div class="container">
+                    <div class="last-slider-content">
+                        <div class="about-products-txt">
+                            <p class="about-prdcts-name">Интерьерные решения</p>
+                            <span class="about-prdcts-theme">Чистовая отделка
+                                европейского качества</span>
+                            <p class="about-prdcts-txt">У нас никто не будет сверлить за стеной с ночи и до утра - все
+                                квартиры в чистовой отделке. При этом мы гарантируем качество!
+                                Большинство строительных и отделочных материалов производятся
+                                в Италии, Франции, Германии и других европейских странах.</p>
+                        </div>
+                        <div class="last-slider">
+                            <div class="about-products-slider-content">
+                                <div class="strange-img-content">
+                                    <div class="strange-main-image strange">
+                                        <img src="{% static './imgs/complex-img.png'%}" alt="">
+                                    </div>
+                                </div>
+                                <div class="strange-img-content strange">
+                                    <div class="strange-main-image">
+                                        <img src="{% static './imgs/complex-img.png'%}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-border background-border-lst-slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-main-content">
+                <div class="strange-img-content">
+                    <div class="strange-main-image">
+                        <img src="{% static './imgs/complex-img.png'%}" alt="">
+                    </div>
+                    <div class="background-border">
+                    </div>
+                </div>
+                <div class="location-box" id="location">
+                    <p>Месторасположение</p>
+                    <span class="location-content-theme">Необходимое - рядом</span>
+                    <div class="time-slider-content">
+                        <div class="time-slider-card">
+                            <p class="time-card-main-txt">Жилой комплекс «Горное Солнце» расположен в
+                                микрорайоне Баганашыл, выше проспекта Аль-Фараби.
+                                Там, где есть все для комфортной жизни!</p>
+                        </div>
+                        <div class="time-slider-card">
+                            <p class="time-card-main-txt">Жилой комплекс «Горное Солнце» расположен в
+                                микрорайоне Баганашыл, выше проспекта Аль-Фараби.
+                                Там, где есть все для комфортной жизни!</p>
+                        </div>
+                        <div class="time-slider-card">
+                            <p class="time-card-main-txt">Жилой комплекс «Горное Солнце» расположен в
+                                микрорайоне Баганашыл, выше проспекта Аль-Фараби.
+                                Там, где есть все для комфортной жизни!</p>
+                        </div>
+                    </div>
+                    <div class="time-slider-location-btn-ctnt">
+                        <a class="location-btn" href="#map">Открыть карту</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-content" id="map">
+                <div class="map">
+                    <span>Яндекс карта</span>
+                    <div style="position:relative;overflow:hidden;"><a
+                            href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps"
+                            style="color:#eee;font-size:12px;position:absolute;top:0px;">Ташкент</a><a
+                            href="https://yandex.uz/maps/10335/tashkent/?ll=69.274551%2C41.314478&utm_medium=mapframe&utm_source=maps&z=13.92"
+                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Ташкент —
+                            Яндекс Карты</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUR6MWn0A" width="560"
+                            height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-content">
+                <div class="features-start-txt">
+                    <p class="features-small-txt">Особенности </p>
+                    <span class="features-big-txt">Технологии строительства</span>
+                </div>
+                <div class="features-slider-contents">
+                    <div class="features-slider-box">
+                        <div class="features-slider-inside">
+                            <img src="{% static './imgs/features-sd-img.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="features-slider-box">
+                        <div class="features-slider-inside">
+                            <img src="{% static './imgs/features-sd-img.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="features-slider-border">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="peculiarities-scn">
+        <div class="peculiarities">
+            <p>Особенности</p>
+            <span class="peculiarities-theme">Продуманное пространство</span>
+            <p class="pecularities-big-txt">
+                Во дворе жилого комплекса «Горное Солнце» царит тихая, спокойная и гармоничная
+                атмосфера. На просторной территории есть детская площадка и уютная зона для
+                вечернего отдыха, где после суетливого дня можно отдохнуть и расслабиться в кругу семьи.
+            </p>
+            <p>
+                Жилой комплекс состоит из четырех четырехэтажных домов, на каждом этаже
+                располагается по 5 квартир. Все подъезды оснащены лифтом.
+            </p>
+        </div>
+        <div class="container">
+            <div class="buildings-map-main" id="main">
+                <div class="building-map-content">
+                    <div class="building-map">
+                        <div class="building-map-img">
+                            <img src="{% static './imgs/building-map.png' %}" alt="">
+                        </div>
+                        <div class="building-infor-btn building-info-btn-1" style="left: 31%;" id="building-btn">
+                            <a href="#layouts-scn">1</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-2" style="left: 13%; top: 31%;"
+                            id="building-btn-1">
+                            <a href="#layouts-scn">2</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-3" style="top: 31%; left: 35%;"
+                            id="building-btn-2">
+                            <a href="#layouts-scn">3</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-4" style="top: 31%; left: 45%;"
+                            id="building-btn-3">
+                            <a href="#layouts-scn">4</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-5" style="top: 30%; right: 33%;"
+                            id="building-btn-4">
+                            <a href="#layouts-scn">5</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-6" style="top: 32%; right: 25%;"
+                            id="building-btn-5">
+                            <a href="#layouts-scn">6</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-7" style="top: 41%; right: 26%;"
+                            id="building-btn-6">
+                            <a href="#layouts-scn">7</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-9" style="bottom: 36%; right: 18%;"
+                            id="building-btn-7">
+                            <a href="#layouts-scn">P</a>
+                        </div>
+                        <div class="building-infor-btn building-info-btn-9" style="top: 41%; left: 9%;"
+                            id="building-btn-8">
+                            <a href="#layouts-scn">P</a>
+                        </div>
+                    </div>
+                    <div class="garage-model-main">
+                        <div class="garage-model-inner">        
+                        <div class="close-btn"></div>
+                            <div class="custom-model-wrap garage-model-wrap">
+                                <div class="garage-content-wrap">
+                                 <img class="parking" src="{% static './imgs/parking.jpg' %}"></img>
+                                </div>
+                            </div>  
+                        </div>  
+                        <div class="bg-overlay"></div>
+                    </div> 
+                    <div class="btns-and-compas">
+                        <div class="building-map-btn">
+                            <a>Выбрать Дом</a>
+                        </div>
+                        <div class="compas">
+                            <img src="{% static './imgs/kompas-img.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="layouts-scn" id="layouts-scn">
+        <div class="container">
+            <div class="main-div-layout">
+                <div class="layout-secondary-div" style="width: 674px;">
+                    <div class="layouts-content">
+
+                            <select class="flat-select" name="entrences" id="flats1" hx-get = "{% url 'floors' %}" hx-trigger = "change" hx-target = "#floors">
+                                {% for enter in entrences %}
+                                <option class="flat-option" value="{{enter.pk}}">{{enter.name}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <select class="flat-select" name="floors" id="flats2" hx-get = "/rooms/" hx-trigger = "change" hx-target = "#rooms">
+                                {% for floor in floors %}
+                                <option class="flat-option" value="{{floor.pk}}">{{floor.name}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <select class="flat-select" name="room" id="flats3" hx-get = "/rooms/" hx-trigger = "change" hx-target = "#rooms">
+                                {% for room in rooms %}
+                                <option class="flat-option" value="{{room.pk}}">{{room.name}}</option>
+                                {% endfor %}
+                            </select>
+                            <!-- <div class="select" tabindex="1">
+                                <input class="selectopt" name="test" type="radio" id="opt1" checked>
+                                <label for="opt1" class="option">1й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt2">
+                                <label for="opt2" class="option">2й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt3">
+                                <label for="opt3" class="option">3й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt4">
+                                <label for="opt4" class="option">4й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt5">
+                                <label for="opt5" class="option">5й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt6">
+                                <label for="opt6" class="option">6й подъезд</label>
+                                <input class="selectopt" name="test" type="radio" id="opt7">
+                                <label for="opt7" class="option">7й подъезд</label>
+                            </div>
+
+                            <div class="select" tabindex="1">
+                                <input class="selectopt" name="test1" type="radio" id="opt8" checked>
+                                <label for="opt8" class="option">1й этаж</label>
+                                <input class="selectopt" name="test1" type="radio" id="opt9">
+                                <label for="opt9" class="option">2й этаж</label>
+                                <input class="selectopt" name="test1" type="radio" id="opt10">
+                                <label for="opt10" class="option">3й этаж</label>
+                                <input class="selectopt" name="test1" type="radio" id="opt11">
+                                <label for="opt11" class="option">4й этаж</label>
+                            </div>
+
+                            <div class="select" tabindex="1">
+                                <input class="selectopt" name="test2" type="radio" id="opt12" checked>
+                                <label for="opt12" class="option">Квартира #1</label>
+                                <input class="selectopt" name="test2" type="radio" id="opt13">
+                                <label for="opt13" class="option">Квартира #2</label>
+                                <input class="selectopt" name="test2" type="radio" id="opt14">
+                                <label for="opt14" class="option">Квартира #3</label>
+                                <input class="selectopt" name="test2" type="radio" id="opt15">
+                                <label for="opt15" class="option">Квартира #4</label>
+                                <input class="selectopt" name="test2" type="radio" id="opt16">
+                                <label for="opt16" class="option">Квартира #5</label>
+                            </div> -->
+                        <!-- <div class="layaut-dropdown">
+                            <div class="first-entrance-content">
+                                <a class="first-entrance">1й подъезд<img class="dropdown-img"
+                                        src="./imgs/dropdown-img.png" alt=""></a>
+                            </div>
+                            <div class="layouts-inside-drop">
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-1 layaut-drp" id="layaut-drp-1">2й подъезд</a>
+                                </div>
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-2 layaut-drp" id="layaut-drp-2">3й подъезд</a>
+                                </div>
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-3 layaut-drp" id="layaut-dr-3">4й подъезд</a>
+                                </div>
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-4 layaut-drp" id="layaut-drp-4">5й подъезд</a>
+                                </div>
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-5 layaut-drp" id="layaut-drp-5">6й подъезд</a>
+                                </div>
+
+                                <div class="layaut-drp-btn-content">
+                                    <a class="layaut-drop-btn-6 layaut-drp" id="layaut-drp-6">7й подъезд</a>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="layaut-select-floor-main">
+                            <div class="lay-out-select-content first-floor">
+                                <a class="first-floor-btn">1й этаж <img class="dropdown-img"
+                                        src="./imgs/dropdown-img.png" alt=""></a>
+                            </div>
+                            <div class="layout-inside">
+                                <div class="lay-out-select-content">
+                                    <a>2й этаж</a>
+                                </div>
+                                <div class="lay-out-select-content">
+                                    <a>3й этаж</a>
+                                </div>
+                                <div class="lay-out-select-content">
+                                    <a>4й этаж</a>
+                                </div>
+                            </div>
+                        </div> -->
+   <!-- 
+                        <div class="layaut-flat-main">
+                            <div class="layaut-flat-content">
+                                <a class="layout-flat-btn-1">Квартира #1<img class="dropdown-img"
+                                        src="./imgs/dropdown-img.png" alt=""></a>
+                            </div>
+                            <div class="layout-flat-inside">
+                                <div class="layaut-flat-content">
+                                    <a>Квартира #2</a>
+                                </div>
+                                <div class="layaut-flat-content">
+                                    <a>Квартира #3</a>
+                                </div>
+                                <div class="layaut-flat-content">
+                                    <a>Квартира #4</a>
+                                </div>
+                                <div class="layaut-flat-content">
+                                    <a>Квартира #5</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <div>
+                        <div class="layout-home-info-content">
+                            <div class="number-of-rooms-content">
+                                <div class="number-of-rooms">
+                                    <p>Количество комнат</p>
+                                    <p>Площадь квартиры</p>
+                                </div>
+                                <div class="number-of-rooms">
+                                    <p class="number-right">3 комнаты</p>
+                                    <p class="number-right">101.1м2</p>
+                                </div>
+                            </div>
+                            <div class="sell-info-content">
+                                <p>Продана</p>
+                            </div>
+                        </div>
+                        <div class="send-application">
+                            <span>Понравилась квартира?</span>
+                            <p>Хотите узнать стоимость?
+                                Отправьте заявку, и мы сразу перезвоним!</p>
+                        </div>
+                        <div class="send-application-btn-content">
+                            <a class="send-application-btn" href="">Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-of-bulding">
+                    <div class="map-building-main">
+
+                        <div class="map-building-box map-building-box-1 active">
+                            <div class="map-of-building-content content-2d-map" id="2d">
+                                <img src="{% static './imgs/3d-img.png' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="map-building-box map-building-box-2">
+                            <div class="map-of-building-content content-3d-map" id="3d">
+                                <img src="{% static './imgs/3d-img.png' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="map-building-button">
+                        <a class="content-d content-2d active" data-filter="map-building-box-1">2D</a>
+                        <a class="content-d content-3d" data-filter="map-building-box-2">3D</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-content-scn">
+        <div class="about-the-developer">
+            <span>О застройщике </span>
+            <p>Застройщик жилого комплекса «Горное Солнце» - жилищно-строительный кооператив «Таулы Аспан».
+                Компания занимается строительством жилья с 1990-х годов. В истории их проектов жилые комплексы
+                «White Fort» и «Фаворит», частные коттеджи и коммерческие объекты.</p>
+        </div>
+    </section>
+    <section class="forms-scn">
+        <div class="container">
+            <div class="forms-content">
+                <div class="forms-content-box">
+                    <div class="form-txt">
+                        <span>Форма заявки</span>
+                        <p>Хотите узнать стоимость?
+                            Отправьте заявку, и мы сразу перезвоним!</p>
+                    </div>
+                    
+                    <form class="form" method="post">
+                        {{form}}
+                        {% csrf_token %}
+                        <input class="input" type="text" placeholder="{{form.f_name}}">
+                        <input class="input" type="number" placeholder="{{form.phone}}">
+                        <input class="input" type="number" placeholder="{{form.floor}}">
+                        <button class="input-btn" type="submit">Отправить заявку</button>
+                    </form>
+                    
+                </div>
+                <div class="form-image">
+                    <div class="strange-img-content">
+                        <div class="strange-main-image">
+                            <img src="{% static './imgs/complex-img.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="ft-main-content">
+                <div class="about-us-content-ft">
+                    <div class="ft-img">
+                        <img src="{% static './imgs/about-us-img.png' %}" alt="">
+                    </div>
+                    <div class="about-us-txt">
+                        <span>О нас</span>
+                        <p>Жилой комплекс «Горное Солнце»
+                            находится в одном из лучших и
+                            экологически чистых районов Алматы,</p>
+                    </div>
+                </div>
+                <div class="ft-btns-content">
+                    <span>Карта сайта</span>
+                    <div class="ft-btns">
+                        <a href="#">О комплексе</a>
+                        <a href="#">Особенности</a>
+                        <a href="#layouts-scn">Планировки</a>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                </div>
+                <div class="ft-lst-content">
+                    <span>Связаться с нами</span>
+                    <p>Алматы, пр. Аль-Фараби, 144
+                        sales@gornoesolnce.kz</p>
+                    <div class="ft-icon-btn">
+                        <a href="#"><img src="{% static './imgs/telephone-icon.svg'%}" alt=""></a>
+                        <a href="#"><img src="{% static './imgs/instagram-icon.svg'%}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> 
+
+      
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ea1d0fa4-06b8-49e7-8e2d-04f86e3ceae8" type="text/javascript"></script>
+    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
+    <script src="{% static './main.js ' %}"></script>
+</body>
+</html>    

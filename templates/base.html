@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<select class="flat-select" name="entrences" id="flats1" hx-get = "{% url 'floors' %}" hx-trigger = "change" hx-target = "#floors">
+    {% for enter in entrences %}
+    <option class="flat-option" value="{{enter.pk}}">{{enter.name}}</option>
+    {% endfor %}
+</select>
+<div id="floors">
+    {% include 'floors.html' %}
+</div>
+
+{% endblock %}
